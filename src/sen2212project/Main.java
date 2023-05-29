@@ -5,13 +5,12 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Hashtable;
 import java.util.Scanner;
 
 public class Main {
-	private static Hashtable<String, LinkedList<Person>> gozRengiTable = new Hashtable<>();
-	private static Hashtable<String, LinkedList<Person>> sacRengiTable = new Hashtable<>();
-	private static Hashtable<String, LinkedList<Person>> boyTable = new Hashtable<>();
+	private static Hashmap<String, LinkedList<Person>> gozRengiTable = new Hashmap<>();
+	private static Hashmap<String, LinkedList<Person>> sacRengiTable = new Hashmap<>();
+	private static Hashmap<String, LinkedList<Person>> boyTable = new Hashmap<>();
 	private static ArrayList<String> isimler = new ArrayList<>();
 	private static final String dosyaYolu = RandomData.path; 
 	
@@ -63,7 +62,7 @@ public class Main {
 		System.out.println("Boy giriniz ");
 		String boy = input.nextLine();
 
-		Hashtable<String,Integer> answer = new Hashtable<String,Integer>();
+		Hashmap<String,Integer> answer = new Hashmap<String,Integer>();
 
 		int tofind = 0;
 		if(gozRengi != "") {
