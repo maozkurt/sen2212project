@@ -37,8 +37,10 @@ public class Hashmap<keyType, valType> {
 	}
 
 	public void put(keyType key, valType value) {
-		keyList.add(key);
-		map[hash(key)] = value;
+		int hashval = hash(key);
+        if(map[hashval] == null)
+            keyList.add(key);
+		map[hashval] = value;
 		
 	}
 	
